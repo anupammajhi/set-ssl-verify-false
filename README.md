@@ -116,3 +116,24 @@ Configuring certificate while SSL authentication is true (recommended)
 conda config --set ssl_verify True
 conda config --set ssl_verify C:\Users\youruser\.certificates\yourcertname.crt
 ```
+
+## **CURL**
+---
+Disabling SSL ( unsafe not recommended)
+```
+curl --insecure -I https://google.com/
+```
+Optionally you can add insecure option to your $HOME/.curlrc file:
+```
+vi $HOME/.curlrc
+```
+Append the following:
+
+insecure
+
+
+Configuring certificate while SSL authentication is true (recommended)
+```
+curl --cacert C:\Users\youruser\.certificates\yourcertname.crt https://google.com
+
+```
