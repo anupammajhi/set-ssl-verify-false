@@ -75,6 +75,12 @@ Configuring certificate while SSL authentication is true (recommended)
 ```
 pip --cert C:\Users\youruser\.certificates\yourcertname.crt install packagename
 ```
+OR
+Update the pip.ini (e.g. %APPDATA%\pip\pip.ini) file to reflect this configuration. 
+```
+[global]
+cert = C:\Users\youruser\.certificates\yourcertname.crt
+```
 
 ## **AWS-CLI**
 ---
